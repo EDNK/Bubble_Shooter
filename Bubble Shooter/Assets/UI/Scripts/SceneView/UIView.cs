@@ -26,6 +26,9 @@ namespace UI.Scripts.SceneView
             gameObject.SetActive(false);
         }
 
+        public abstract void ShowView();
+        public abstract void HideView();
+
         protected abstract void InitializeView();
     }
 }

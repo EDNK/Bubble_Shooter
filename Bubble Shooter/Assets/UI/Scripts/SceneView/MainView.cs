@@ -7,17 +7,18 @@ public class MainView : UIView
 {
     [SerializeField] private Button _playButton;
     public Action PlayClick;
+
+    public override void ShowView()
+    {
+        gameObject.SetActive(true);
+    }
+
     protected override void InitializeView()
     {
         _playButton.onClick.AddListener(() => PlayClick?.Invoke());
     }
 
-    public void Show()
-    {
-        gameObject.SetActive(true);
-    }
-
-    public void Hide()
+    public override void HideView()
     {
         gameObject.SetActive(false);
     }

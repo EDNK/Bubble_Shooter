@@ -1,17 +1,25 @@
 using System;
+using UI.Scripts.SceneView;
 
 namespace UI.Scripts.ViewController
 {
     public class GameViewController : ViewScreenController
     {
+        private readonly GameView _gameView;
+
+        public GameViewController(GameView gameView)
+        {
+            _gameView = gameView;
+        }
+        
         public override void ShowView()
         {
-            throw new NotImplementedException();
+            _gameView.ShowView();
         }
 
         public override void HideView()
         {
-            throw new NotImplementedException();
+            _gameView.HideView();
         }
     }
 }

@@ -13,23 +13,23 @@ namespace UI.Scripts.ViewController
             _view = view;
             _screenManager = screenManager;
         }
-        
+
         public override void ShowView()
         {
             _view.PlayClick += PlayClick;
-            _view.Show();
+            _view.ShowView();
         }
 
         public override void HideView()
         {
             _view.PlayClick -= PlayClick;
-            _view.Hide();
+            _view.HideView();
         }
-        
+
         private void PlayClick()
         {
+            _screenManager.ShowView(typeof(GameViewController));
             HideView();
-            _screenManager.ShowView(typeof(GameView));
         }
     }
 }
