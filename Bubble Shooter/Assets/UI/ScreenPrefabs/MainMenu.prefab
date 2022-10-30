@@ -147,6 +147,8 @@ GameObject:
   - component: {fileID: 1016141839114346256}
   - component: {fileID: 515646702737832985}
   - component: {fileID: 6726849109434453387}
+  - component: {fileID: 464667962708645086}
+  - component: {fileID: 2977502231021703143}
   m_Layer: 5
   m_Name: MainMenu
   m_TagString: Untagged
@@ -245,6 +247,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 809261aca05eef24394cf6d20ca23b4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playButton: {fileID: 4951250932899745745}
+--- !u!114 &464667962708645086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5214881555222451035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!225 &2977502231021703143
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5214881555222451035}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &6908969067553500492
 GameObject:
   m_ObjectHideFlags: 0

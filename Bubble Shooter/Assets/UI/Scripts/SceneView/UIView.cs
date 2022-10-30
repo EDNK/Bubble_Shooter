@@ -1,6 +1,7 @@
 using UI.Scripts.ScreenManager;
 using UnityEngine;
 using UnityEngine.UI;
+using Zenject;
 
 namespace UI.Scripts.SceneView
 {
@@ -11,6 +12,7 @@ namespace UI.Scripts.SceneView
     {
         private IScreenManager _screenManager;
 
+        [Inject]
         public void Construct(IScreenManager screenManager)
         {
             _screenManager = screenManager;

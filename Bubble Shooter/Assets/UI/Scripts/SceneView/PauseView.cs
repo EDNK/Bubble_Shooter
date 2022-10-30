@@ -1,18 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+using System;
 
-public class PauseView : MonoBehaviour
+namespace UI.Scripts.SceneView
 {
-    // Start is called before the first frame update
-    void Start()
+    public class PauseView : UIView
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        protected override void InitializeView()
+        {
+        }
     }
 }
