@@ -541,6 +541,7 @@ GameObject:
   - component: {fileID: 2949315956565976350}
   - component: {fileID: 8473941877699911391}
   - component: {fileID: 711838843989103963}
+  - component: {fileID: 6459004390799659853}
   m_Layer: 5
   m_Name: PauseView
   m_TagString: Untagged
@@ -585,7 +586,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -627,6 +628,18 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &6459004390799659853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8224623380866942917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e94a832bef86e54aad8cdcccd4c9587, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8564072026099974968
 GameObject:
   m_ObjectHideFlags: 0

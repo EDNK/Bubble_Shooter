@@ -4,13 +4,22 @@ using System.Linq;
 using UI.Scripts.SceneView;
 using UI.Scripts.ViewController;
 using UnityEngine;
+using Zenject;
 
 namespace UI.Scripts.ScreenManager
 {
     public class ScreenManager : IScreenManager
     {
-        private readonly List<ViewScreenController> _controllers = new List<ViewScreenController>(6);
+        private readonly List<IViewController> _controllers = new List<IViewController>(6);
         private readonly List<UIView> _views = new List<UIView>(6);
+
+        public void Resolve(DiContainer container)
+        {
+            foreach (var viewController in container.ResolveAll<IViewController>())
+            {
+                RegisterController(viewController);
+            }
+        }
 
         public void RegisterView(UIView view)
         {
@@ -20,7 +29,7 @@ namespace UI.Scripts.ScreenManager
             }
         }
 
-        public void RegisterController(ViewScreenController controller)
+        public void RegisterController(IViewController controller)
         {
             if (!_controllers.Contains(controller))
             {
@@ -33,7 +42,7 @@ namespace UI.Scripts.ScreenManager
             _views.Remove(view);
         }
 
-        public void UnregisterController(ViewScreenController controller)
+        public void UnregisterController(IViewController controller)
         {
             _controllers.Remove(controller);
         }
@@ -50,11 +59,6 @@ namespace UI.Scripts.ScreenManager
             controller.ShowView();
         }
 
-        private ViewScreenController GetController(Type controllerType)
-        {
-            return _controllers.First(controllerType.IsInstanceOfType);
-        }
-
         public void HideView(Type controllerType)
         {
             var controller = GetController(controllerType);
@@ -63,8 +67,13 @@ namespace UI.Scripts.ScreenManager
                 Debug.LogError($"There is no view controller of type {controllerType}");
                 return;
             }
-            
+
             controller.HideView();
+        }
+
+        private IViewController GetController(Type controllerType)
+        {
+            return _controllers.First(controllerType.IsInstanceOfType);
         }
     }
 }
