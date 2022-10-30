@@ -279,10 +279,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 325278435134484205, guid: a60ba9cfe1c93db47b58891721148b5a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1636360614291133624, guid: a60ba9cfe1c93db47b58891721148b5a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1636360614461340409, guid: a60ba9cfe1c93db47b58891721148b5a, type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 332207495}
+    - target: {fileID: 1636360614461340409, guid: a60ba9cfe1c93db47b58891721148b5a, type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 1636360614461340410, guid: a60ba9cfe1c93db47b58891721148b5a, type: 3}
       propertyPath: m_Name
       value: MainUI

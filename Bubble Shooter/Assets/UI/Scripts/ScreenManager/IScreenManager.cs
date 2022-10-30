@@ -6,7 +6,5 @@ namespace UI.Scripts.ScreenManager
     {
         void RegisterView(UIView view);
         void UnregisterView(UIView view);
-        
-        void Show
     }
 }
