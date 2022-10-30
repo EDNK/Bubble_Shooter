@@ -172,7 +172,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: 0
   far clip plane: 0.31
   field of view: 60
   orthographic: 1
@@ -382,6 +382,10 @@ PrefabInstance:
     - target: {fileID: 1636360614461340414, guid: a60ba9cfe1c93db47b58891721148b5a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3635581123660543568, guid: a60ba9cfe1c93db47b58891721148b5a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a60ba9cfe1c93db47b58891721148b5a, type: 3}
