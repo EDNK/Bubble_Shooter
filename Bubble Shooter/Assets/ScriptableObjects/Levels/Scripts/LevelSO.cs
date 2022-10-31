@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using Code.Bubble;
 using ScriptableObjects.Configs;
 using ScriptableObjects.Levels;
@@ -13,22 +12,22 @@ namespace ScriptableObjects.BubbleInfo
     [Serializable]
     public class LevelSO : ScriptableObject
     {
-        public GameConfig _gameConfig;
-        public BubbleSequence _shootSequence;
-        public List<BubblesLayerData> _field = new List<BubblesLayerData>();
+        public GameConfig GameConfig;
+        public BubbleSequence ShootSequence;
+        public List<BubblesLayerData> Field = new List<BubblesLayerData>();
 
         private void OnValidate()
         {
             var layerType = LayerType.Full;
-            for (var i = 0; i < _field.Count; i++)
+            for (var i = 0; i < Field.Count; i++)
             {
                 if (NotCorrectLengthOfLayer(i, layerType))
                 {
                     var newList = EditedList(layerType, i);
-                    _field[i].Bubbles = newList;
+                    Field[i].Bubbles = newList;
                 }
 
-                _field[i].LayerType = layerType;
+                Field[i].LayerType = layerType;
                 layerType = layerType == LayerType.Full ? LayerType.NotFull : LayerType.Full;
             }
         }
@@ -39,9 +38,9 @@ namespace ScriptableObjects.BubbleInfo
             var expectedLength = ExpectedLength(layerType);
             for (var j = 0; j < expectedLength; j++)
             {
-                if (_field[i].Bubbles.Count > j)
+                if (Field[i].Bubbles.Count > j)
                 {
-                    newList.Add(_field[i].Bubbles[j]);
+                    newList.Add(Field[i].Bubbles[j]);
                     continue;
                 }
 
@@ -53,17 +52,17 @@ namespace ScriptableObjects.BubbleInfo
 
         private bool NotCorrectLengthOfLayer(int i, LayerType layerType)
         {
-            return _field[i].Bubbles.Count != ExpectedLength(layerType);
+            return Field[i].Bubbles.Count != ExpectedLength(layerType);
         }
 
         private int ExpectedLength(LayerType layerType)
         {
             if (layerType == LayerType.Full)
             {
-                return _gameConfig.LayerLength;
+                return GameConfig.LayerLength;
             }
 
-            return _gameConfig.LayerLength - 1;
+            return GameConfig.LayerLength - 1;
         }
     }
 }
