@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Code.Bubble;
 using ScriptableObjects.Configs;
+using ScriptableObjects.Levels;
 using UnityEngine;
 
 namespace ScriptableObjects.BubbleInfo
@@ -61,30 +62,6 @@ namespace ScriptableObjects.BubbleInfo
             }
 
             return _gameConfig.LayerLength - 1;
-        }
-
-        [Serializable]
-        public class BubblesLayerData
-        {
-            public List<BubbleData> Bubbles;
-            public LayerType LayerType;
-
-            public BubblesLayerData(List<BubbleData> list, LayerType layerType)
-            {
-                Bubbles = list;
-                LayerType = layerType;
-            }
-        }
-
-        [Serializable]
-        public class BubbleData
-        {
-            public BubbleColor BubbleColor;
-
-            public BubbleData()
-            {
-                BubbleColor = BubbleColor.Empty;
-            }
         }
     }
 }
