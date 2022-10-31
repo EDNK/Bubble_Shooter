@@ -1,8 +1,9 @@
+using System;
 using System.Collections.Generic;
 
 namespace Code.Bubble
 {
-    public abstract class BubblesLayer
+    public class BubblesLayer
     {
         private List<Bubble> _bubbleList;
 
