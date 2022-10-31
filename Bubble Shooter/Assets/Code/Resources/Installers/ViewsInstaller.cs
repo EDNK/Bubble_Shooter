@@ -9,6 +9,7 @@ namespace Code.Resources.Installers
     public class ViewsInstaller : MonoInstaller, IInitializable
     {
         [SerializeField] private MainView _mainView;
+        [SerializeField] private GameChooseView _gameChooseView;
         [SerializeField] private GameView _gameView;
         [SerializeField] private PauseView _pauseView;
 
@@ -27,6 +28,7 @@ namespace Code.Resources.Installers
             Container.BindInterfacesAndSelfTo<MainViewController>().AsSingle();
             Container.BindInterfacesAndSelfTo<GameViewController>().AsSingle();
             Container.BindInterfacesAndSelfTo<PauseViewController>().AsSingle();
+            Container.BindInterfacesAndSelfTo<GameChooseViewController>().AsSingle();
         }
 
         private void InstallViews()
@@ -34,6 +36,7 @@ namespace Code.Resources.Installers
             Container.BindInterfacesAndSelfTo<MainView>().FromInstance(_mainView);
             Container.BindInterfacesAndSelfTo<GameView>().FromInstance(_gameView);
             Container.BindInterfacesAndSelfTo<PauseView>().FromInstance(_pauseView);
+            Container.BindInterfacesAndSelfTo<GameChooseView>().FromInstance(_gameChooseView);
         }
 
         public void Initialize()

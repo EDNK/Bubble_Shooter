@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Level1
   m_EditorClassIdentifier: 
   _gameConfig: {fileID: 11400000, guid: 7659c4eeb3be61f4f9e1c3457e99b053, type: 2}
+  _shootSequence: {fileID: 11400000, guid: d5533f5709097b54b8a1cffc8053d528, type: 2}
   _field:
   - Bubbles:
     - BubbleColor: 1

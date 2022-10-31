@@ -1,10 +1,13 @@
-﻿using UI.Scripts.SceneView;
+﻿using ScriptableObjects.BubbleInfo;
+using UI.Scripts.SceneView;
 using UI.Scripts.ScreenManager;
+using UnityEngine;
 
 namespace UI.Scripts.ViewController
 {
-    public class GameChooseViewController: ViewScreenController
+    public class GameChooseViewController : ViewScreenController
     {
+        private const string PathToLevels = "Levels";
         private readonly GameChooseView _view;
         private readonly IScreenManager _screenManager;
 
@@ -17,18 +20,25 @@ namespace UI.Scripts.ViewController
         public override void ShowView()
         {
             _view.RandomLevelsClick += RandomLevelsClick;
-            _view.PresettedLevelsClick += PresettedLevelsClick;
+            _view.PreparedLevelsClick += PreparedLevelsClick;
+            _view.LevelSelected += StartNewLevel;
             _view.ShowView();
         }
 
-        private void PresettedLevelsClick()
+        private void PreparedLevelsClick()
         {
-            HideView();
+            var levels = Resources.LoadAll<LevelSO>(PathToLevels);
+            _view.ShowLevelsList(levels);
         }
 
         private void RandomLevelsClick()
         {
-            HideView();
+            //TODO PASS TO GAMEVIEWCONTROLLER INTERFACES FOR RANDOMLEVEL
+        }
+        
+        private void StartNewLevel(LevelSO level)
+        {
+            //TODO PASS TO GAMEVIEWCONTROLLER INTERFACES FOR LEVEL    
         }
 
         public override void HideView()

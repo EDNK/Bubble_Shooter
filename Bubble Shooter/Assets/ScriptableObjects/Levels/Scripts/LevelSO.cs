@@ -4,6 +4,7 @@ using System.Linq;
 using Code.Bubble;
 using ScriptableObjects.Configs;
 using ScriptableObjects.Levels;
+using ScriptableObjects.SequencePatterns;
 using UnityEngine;
 
 namespace ScriptableObjects.BubbleInfo
@@ -13,6 +14,7 @@ namespace ScriptableObjects.BubbleInfo
     public class LevelSO : ScriptableObject
     {
         public GameConfig _gameConfig;
+        public BubbleSequence _shootSequence;
         public List<BubblesLayerData> _field = new List<BubblesLayerData>();
 
         private void OnValidate()

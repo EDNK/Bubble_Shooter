@@ -347,6 +347,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _mainView: {fileID: 1636360615946298053}
+  _gameChooseView: {fileID: 2145998415}
   _gameView: {fileID: 1636360615946298052}
   _pauseView: {fileID: 1636360615946298051}
 --- !u!1 &1838290195
@@ -454,6 +455,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5dcac94210d6692469ff4d2f6c224032, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2145998415 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4115180218344601804, guid: a60ba9cfe1c93db47b58891721148b5a, type: 3}
+  m_PrefabInstance: {fileID: 1636360615946298050}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f60387d6f9ad024eb0913259d336204, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &1636360615946298050
@@ -569,6 +581,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1636360614461340414, guid: a60ba9cfe1c93db47b58891721148b5a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2309343281849501952, guid: a60ba9cfe1c93db47b58891721148b5a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2309343281849501952, guid: a60ba9cfe1c93db47b58891721148b5a, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2309343281849501952, guid: a60ba9cfe1c93db47b58891721148b5a, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2309343281849501952, guid: a60ba9cfe1c93db47b58891721148b5a, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2309343281849501952, guid: a60ba9cfe1c93db47b58891721148b5a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2309343281849501952, guid: a60ba9cfe1c93db47b58891721148b5a, type: 3}
+      propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3635581123660543568, guid: a60ba9cfe1c93db47b58891721148b5a, type: 3}

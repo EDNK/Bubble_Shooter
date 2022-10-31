@@ -28,7 +28,7 @@ namespace UI.Scripts.ViewController
 
         private void PlayClick()
         {
-            _screenManager.ShowView(typeof(GameViewController));
+            _screenManager.ShowView(typeof(GameChooseViewController));
             HideView();
         }
     }
